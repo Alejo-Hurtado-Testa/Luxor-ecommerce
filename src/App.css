@@ -27,9 +27,15 @@
 }
 
 /* PRINCIPAL */
-.titleMain {
+.title-main {
   margin-top: 50px;
   text-align: center;
+}
+
+.productos-main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 /* ItemCount */

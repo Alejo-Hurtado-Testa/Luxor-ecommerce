@@ -2,9 +2,10 @@ import Item from './Item';
 
 export default function Itemlist({ items }) {
   console.log(items);
+  console.log(items.id);
   return (
     <div>
-      {items.map((item) => {
+      {items.map((item) => (
         <Item
           id={item.id}
           title={item.title}
@@ -12,8 +13,8 @@ export default function Itemlist({ items }) {
           price={item.price}
           stock={item.stock}
           initial={item.initial}
-        />;
-      })}
+        />
+      ))}
     </div>
   );
 }

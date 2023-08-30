@@ -15,7 +15,7 @@ const ItemListContainer = ({ greeting }) => {
     {
       id: 2,
       title: 'Smirnoff Citric',
-      picture: '/img/smirnoffraspberry.png',
+      picture: '/img/smirnoffcitric.png',
       price: 15,
       stock: 10,
       initial: 1,
@@ -23,18 +23,19 @@ const ItemListContainer = ({ greeting }) => {
     {
       id: 3,
       title: 'Smirnoff Green Apple',
-      picture: '/img/smirnoffraspberry.png',
+      picture: '/img/smirnoffgreenapple.png',
       price: 8,
       stock: 10,
       initial: 1,
     },
   ];
 
-  const getProductos = new Promise((resolve) => {
-    setTimeout(() => {
-      resolve(productos);
-    }, 2000);
-  });
+  const getProductos = () =>
+    new Promise((resolve) => {
+      setTimeout(() => {
+        resolve(productos);
+      }, 2000);
+    });
 
   useEffect(() => {
     getProductos().then((res) => {
@@ -46,8 +47,8 @@ const ItemListContainer = ({ greeting }) => {
 
   return (
     <div>
-      <h1 className="titleMain">{greeting}</h1>
-      <div>
+      <h1 className="title-main">{greeting}</h1>
+      <div className="productos-main">
         <Itemlist items={listadoProductos} />
       </div>
     </div>

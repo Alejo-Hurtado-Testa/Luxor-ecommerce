@@ -37,10 +37,16 @@ export default function NavBar() {
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="ms-auto navLinks">
             <Nav.Link className="navLinksItems" href="#home">
-              Home
+              Inicio
             </Nav.Link>
             <Nav.Link className="navLinksItems" href="#link">
-              Productos
+              Bebidas
+            </Nav.Link>
+            <Nav.Link className="navLinksItems" href="#link">
+              Cervezas
+            </Nav.Link>
+            <Nav.Link className="navLinksItems" href="#link">
+              Acompañamientos
             </Nav.Link>
             <Nav.Link className="navLinksItems" href="#link">
               <CartWidget />

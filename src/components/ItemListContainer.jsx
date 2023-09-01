@@ -1,49 +1,32 @@
 import { useEffect, useState } from 'react';
 import Itemlist from './ItemList';
+import bebidasJson from '../bebidas.json';
 
 const ItemListContainer = ({ greeting }) => {
   const [listadoProductos, setListadoProductos] = useState([]);
-  const productos = [
-    {
-      id: 1,
-      title: 'Smirnoff Raspberry',
-      picture: '/img/smirnoffraspberry.png',
-      price: 10,
-      stock: 10,
-      initial: 1,
-    },
-    {
-      id: 2,
-      title: 'Smirnoff Citric',
-      picture: '/img/smirnoffcitric.png',
-      price: 15,
-      stock: 10,
-      initial: 1,
-    },
-    {
-      id: 3,
-      title: 'Smirnoff Green Apple',
-      picture: '/img/smirnoffgreenapple.png',
-      price: 8,
-      stock: 10,
-      initial: 1,
-    },
-  ];
+  const [loading, setLoading] = useState(true);
 
   const getProductos = () =>
     new Promise((resolve) => {
       setTimeout(() => {
-        resolve(productos);
+        resolve(bebidasJson);
       }, 2000);
     });
 
   useEffect(() => {
     getProductos().then((res) => {
       setListadoProductos(res);
+      setLoading(false);
     });
   }, []);
 
-  console.log(listadoProductos);
+  if (!listadoProductos) return [];
+  if (loading)
+    return (
+      <h2 className="title-cargando">
+        Cargando Productos, espera por favor...
+      </h2>
+    );
 
   return (
     <div>

@@ -6,7 +6,7 @@ export default function Item({ id, title, picture, price, stock, initial }) {
       <h1 className="name-produc" key={id}>
         {title}
       </h1>
-      <img src={picture} alt={title} />
+      <img src={picture} alt={title} width={300} />
       <h2>${price}</h2>
       <h2 className="detail-produc">Ver detalles del producto</h2>
       <ItemCount stock={stock} initial={initial} />

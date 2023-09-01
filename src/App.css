@@ -27,6 +27,11 @@
 }
 
 /* PRINCIPAL */
+.title-cargando {
+  margin-top: 90px;
+  text-align: center;
+}
+
 .title-main {
   margin-top: 50px;
   text-align: center;
@@ -79,7 +84,8 @@
 
 .btndash,
 .btnplus {
-  cursor: pointer;
+  background: transparent;
+  border: none;
 }
 
 .numbercount-produc {

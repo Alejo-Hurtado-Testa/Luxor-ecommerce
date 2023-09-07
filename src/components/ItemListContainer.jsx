@@ -1,24 +1,33 @@
 import { useEffect, useState } from 'react';
 import Itemlist from './ItemList';
-import bebidasJson from '../bebidas.json';
+import productosJson from '../productos.json';
+import { useParams } from 'react-router-dom';
 
-const ItemListContainer = ({ greeting }) => {
+const ItemListContainer = () => {
   const [listadoProductos, setListadoProductos] = useState([]);
   const [loading, setLoading] = useState(true);
+  const { tipo } = useParams();
 
-  const getProductos = () =>
+  const getProductos = (categoria) =>
     new Promise((resolve) => {
       setTimeout(() => {
-        resolve(bebidasJson);
+        if (!categoria) {
+          resolve(productosJson);
+        } else {
+          const productosFiltrados = productosJson.filter(
+            (product) => product.category === categoria
+          );
+          resolve(productosFiltrados);
+        }
       }, 2000);
     });
 
   useEffect(() => {
-    getProductos().then((res) => {
+    getProductos(tipo).then((res) => {
       setListadoProductos(res);
       setLoading(false);
     });
-  }, []);
+  }, [tipo]);
 
   if (!listadoProductos) return [];
   if (loading)
@@ -30,7 +39,9 @@ const ItemListContainer = ({ greeting }) => {
 
   return (
     <div>
-      <h1 className="title-main">{greeting}</h1>
+      <h1 className="title-main">
+        Bienvenidos a Luxor! Te acompañamos adonde sea.
+      </h1>
       <div className="productos-main">
         <Itemlist items={listadoProductos} />
       </div>

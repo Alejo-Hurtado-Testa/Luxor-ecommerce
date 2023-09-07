@@ -2,12 +2,13 @@ import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import CartWidget from './CartWidget';
+import { Link, NavLink } from 'react-router-dom';
 
 export default function NavBar() {
   return (
     <Navbar expand="lg" className="navbar">
       <Container>
-        <Navbar.Brand href="#home">
+        <Navbar.Brand as={Link} to={'/'}>
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="40"
@@ -36,16 +37,28 @@ export default function NavBar() {
         </Navbar.Toggle>
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="ms-auto navLinks">
-            <Nav.Link className="navLinksItems" href="#home">
+            <Nav.Link className="navLinksItems" as={NavLink} to={'/'}>
               Inicio
             </Nav.Link>
-            <Nav.Link className="navLinksItems" href="#link">
+            <Nav.Link
+              className="navLinksItems"
+              as={NavLink}
+              to={'/category/bebidas'}
+            >
               Bebidas
             </Nav.Link>
-            <Nav.Link className="navLinksItems" href="#link">
+            <Nav.Link
+              className="navLinksItems"
+              as={NavLink}
+              to={'/category/cervezas'}
+            >
               Cervezas
             </Nav.Link>
-            <Nav.Link className="navLinksItems" href="#link">
+            <Nav.Link
+              className="navLinksItems"
+              as={NavLink}
+              to={'/category/acompañamientos'}
+            >
               Acompañamientos
             </Nav.Link>
             <Nav.Link className="navLinksItems" href="#link">

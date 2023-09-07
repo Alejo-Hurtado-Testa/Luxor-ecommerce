@@ -1,0 +1,202 @@
+[
+  {
+    "id": 1,
+    "title": "Smirnoff Raspberry",
+    "picture": "/img/smirnoffraspberry.png",
+    "description": "Bebida con alcohol para tragos saborizados",
+    "price": 2150,
+    "stock": 10,
+    "initial": 0,
+    "category": "bebidas"
+  },
+  {
+    "id": 2,
+    "title": "Smirnoff Citric",
+    "picture": "/img/smirnoffcitric.png",
+    "description": "Bebida con alcohol para tragos saborizados",
+    "price": 2400,
+    "stock": 10,
+    "initial": 0,
+    "category": "bebidas"
+  },
+  {
+    "id": 3,
+    "title": "Smirnoff Green Apple",
+    "picture": "/img/smirnoffgreenapple.png",
+    "description": "Bebida con alcohol para tragos saborizados",
+    "price": 2050,
+    "stock": 10,
+    "initial": 0,
+    "category": "bebidas"
+  },
+  {
+    "id": 4,
+    "title": "Smirnoff Citrus",
+    "picture": "/img/smirnoffcitrus.png",
+    "description": "Bebida con alcohol para tragos saborizados",
+    "price": 1990,
+    "stock": 10,
+    "initial": 0,
+    "category": "bebidas"
+  },
+  {
+    "id": 5,
+    "title": "Smirnoff Watermelon",
+    "picture": "/img/smirnoffwatermelon.png",
+    "description": "Bebida con alcohol para tragos saborizados",
+    "price": 2000,
+    "stock": 10,
+    "initial": 0,
+    "category": "bebidas"
+  },
+  {
+    "id": 6,
+    "title": "Smirnoff",
+    "picture": "/img/smirnoff.png",
+    "description": "Bebida con alcohol para tragos saborizados",
+    "price": 1900,
+    "stock": 10,
+    "initial": 0,
+    "category": "bebidas"
+  },
+  {
+    "id": 7,
+    "title": "Coca-Cola",
+    "picture": "/img/cocacola.png",
+    "description": "Bebida con alcohol para tragos saborizados",
+    "price": 500,
+    "stock": 10,
+    "initial": 0,
+    "category": "acompañamientos"
+  },
+  {
+    "id": 8,
+    "title": "Schweppes Clásica",
+    "picture": "/img/schweppes.png",
+    "description": "Bebida con alcohol para tragos saborizados",
+    "price": 400,
+    "stock": 10,
+    "initial": 0,
+    "category": "acompañamientos"
+  },
+  {
+    "id": 9,
+    "title": "Schweppes Pomelo",
+    "picture": "/img/schweppespomelo.png",
+    "description": "Bebida con alcohol para tragos saborizados",
+    "price": 435,
+    "stock": 10,
+    "initial": 0,
+    "category": "acompañamientos"
+  },
+  {
+    "id": 10,
+    "title": "Speed",
+    "picture": "/img/speed.png",
+    "description": "Bebida con alcohol para tragos saborizados",
+    "price": 520,
+    "stock": 10,
+    "initial": 0,
+    "category": "acompañamientos"
+  },
+  {
+    "id": 11,
+    "title": "Baggio de naranja",
+    "picture": "/img/jugonaranja.png",
+    "description": "Bebida con alcohol para tragos saborizados",
+    "price": 470,
+    "stock": 10,
+    "initial": 0,
+    "category": "acompañamientos"
+  },
+  {
+    "id": 12,
+    "title": "Baggio de multifruta",
+    "picture": "/img/jugomultifruta.png",
+    "description": "Bebida con alcohol para tragos saborizados",
+    "price": 470,
+    "stock": 10,
+    "initial": 0,
+    "category": "acompañamientos"
+  },
+  {
+    "id": 13,
+    "title": "Baggio de durazno",
+    "picture": "/img/jugodurazno.png",
+    "description": "Bebida con alcohol para tragos saborizados",
+    "price": 470,
+    "stock": 10,
+    "initial": 0,
+    "category": "acompañamientos"
+  },
+  {
+    "id": 14,
+    "title": "Brahama",
+    "picture": "/img/brahama.png",
+    "description": "Bebida con alcohol para tragos saborizados",
+    "price": 470,
+    "stock": 10,
+    "initial": 0,
+    "category": "cervezas"
+  },
+  {
+    "id": 15,
+    "title": "Corona",
+    "picture": "/img/corona.png",
+    "description": "Bebida con alcohol para tragos saborizados",
+    "price": 470,
+    "stock": 10,
+    "initial": 0,
+    "category": "cervezas"
+  },
+  {
+    "id": 16,
+    "title": "Budweiser",
+    "picture": "/img/budweiser.png",
+    "description": "Bebida con alcohol para tragos saborizados",
+    "price": 470,
+    "stock": 10,
+    "initial": 0,
+    "category": "cervezas"
+  },
+  {
+    "id": 17,
+    "title": "Schneider",
+    "picture": "/img/schneider.png",
+    "description": "Bebida con alcohol para tragos saborizados",
+    "price": 470,
+    "stock": 10,
+    "initial": 0,
+    "category": "cervezas"
+  },
+  {
+    "id": 18,
+    "title": "Quilmes",
+    "picture": "/img/quilmes.png",
+    "description": "Bebida con alcohol para tragos saborizados",
+    "price": 470,
+    "stock": 10,
+    "initial": 0,
+    "category": "cervezas"
+  },
+  {
+    "id": 18,
+    "title": "Stella Artois",
+    "picture": "/img/stellaartois.png",
+    "description": "Bebida con alcohol para tragos saborizados",
+    "price": 470,
+    "stock": 10,
+    "initial": 0,
+    "category": "cervezas"
+  },
+  {
+    "id": 18,
+    "title": "Heineken",
+    "picture": "/img/heineken.png",
+    "description": "Bebida con alcohol para tragos saborizados",
+    "price": 470,
+    "stock": 10,
+    "initial": 0,
+    "category": "cervezas"
+  }
+]

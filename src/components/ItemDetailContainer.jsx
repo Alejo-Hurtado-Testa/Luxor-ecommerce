@@ -1,31 +1,46 @@
 import { useEffect, useState } from 'react';
 import ItemDetail from './ItemDetail';
 import { useParams } from 'react-router-dom';
+import productosJson from '../productos.json';
 
 export default function ItemDetailContainer() {
   const [product, setProduct] = useState();
   const [load, setLoad] = useState(true);
-  const { tipo } = useParams();
+  const { id } = useParams();
+
+  const getProducto = (idproduct) =>
+    new Promise((resolve) => {
+      setTimeout(() => {
+        if (idproduct) {
+          const productosFiltrados = productosJson.filter(
+            (product) => product.id == idproduct
+          );
+          resolve(productosFiltrados);
+        } else {
+          return alert('NO SE ENCONTRARON PRODUCTOS');
+        }
+      }, 2000);
+    });
 
   useEffect(() => {
-    fetch('https://fakestoreapi.com/products')
-      .then((res) => res.json())
-      .then((data) => setProduct(data))
-      .finally(() => setLoad(false));
-  }, [tipo]);
+    getProducto(id).then((res) => {
+      setProduct(res);
+      setLoad(false);
+    });
+  }, [id]);
 
   if (!product) return null;
   if (load)
     return (
       <div>
-        <h1 className="title-cargando">CARGANDO....</h1>
+        <h2 className="title-cargando">CARGANDO....</h2>
       </div>
     );
 
   return (
     <div>
-      <h1>DETALLE</h1>
-      <ItemDetail products={product} />
+      <h1 className="title-itemdetail">detalle del producto</h1>
+      <ItemDetail product={product} />
     </div>
   );
 }

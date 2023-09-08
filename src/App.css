@@ -64,6 +64,8 @@
 }
 
 .detail-produc {
+  color: rgb(33, 37, 41);
+  font-size: 24px;
   margin: 40px 0px;
   transition: all 0.3s ease;
 }
@@ -111,4 +113,36 @@
 .btnadd-produc:hover {
   color: rgb(0, 119, 255);
   background: transparent;
+}
+
+/*  DETALLE DEL ITEM */
+
+.title-itemdetail {
+  text-align: center;
+  margin: 90px 0;
+  text-transform: uppercase;
+}
+
+.container-detail {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.title-detail {
+  text-align: center;
+}
+
+.item-detail {
+  font-weight: bold;
+  text-transform: capitalize;
+  font-size: 1.5rem;
+}
+
+.item-detail span {
+  font-weight: normal;
+}
+
+.count-detail {
+  margin-top: 70px;
 }

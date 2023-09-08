@@ -61,6 +61,146 @@
   },
   {
     "id": 7,
+    "title": "Sernova Manzana-Pera dulce",
+    "picture": "/img/sernovasweetapple.png",
+    "description": "Bebida con alcohol para tragos saborizados",
+    "price": 1900,
+    "stock": 10,
+    "initial": 0,
+    "category": "bebidas"
+  },
+  {
+    "id": 8,
+    "title": "Sernova Tropical",
+    "picture": "/img/sernovatropical.png",
+    "description": "Bebida con alcohol para tragos saborizados",
+    "price": 1900,
+    "stock": 10,
+    "initial": 0,
+    "category": "bebidas"
+  },
+  {
+    "id": 9,
+    "title": "Sernova Wildberries",
+    "picture": "/img/sernovawildberries.png",
+    "description": "Bebida con alcohol para tragos saborizados",
+    "price": 1900,
+    "stock": 10,
+    "initial": 0,
+    "category": "bebidas"
+  },
+  {
+    "id": 10,
+    "title": "Skyy de Anana",
+    "picture": "/img/skyyanana.png",
+    "description": "Bebida con alcohol para tragos saborizados",
+    "price": 1900,
+    "stock": 10,
+    "initial": 0,
+    "category": "bebidas"
+  },
+  {
+    "id": 11,
+    "title": "Skyy de Coco",
+    "picture": "/img/skyycoconut.png",
+    "description": "Bebida con alcohol para tragos saborizados",
+    "price": 1900,
+    "stock": 10,
+    "initial": 0,
+    "category": "bebidas"
+  },
+  {
+    "id": 12,
+    "title": "Skyy de Durazno",
+    "picture": "/img/skyydurazno.png",
+    "description": "Bebida con alcohol para tragos saborizados",
+    "price": 1900,
+    "stock": 10,
+    "initial": 0,
+    "category": "bebidas"
+  },
+  {
+    "id": 13,
+    "title": "Skyy Passion",
+    "picture": "/img/skyypassion.png",
+    "description": "Bebida con alcohol para tragos saborizados",
+    "price": 1900,
+    "stock": 10,
+    "initial": 0,
+    "category": "bebidas"
+  },
+  {
+    "id": 14,
+    "title": "Skyy de Raspberry",
+    "picture": "/img/skyyraspberry.png",
+    "description": "Bebida con alcohol para tragos saborizados",
+    "price": 1900,
+    "stock": 10,
+    "initial": 0,
+    "category": "bebidas"
+  },
+  {
+    "id": 15,
+    "title": "Absolut Vodka",
+    "picture": "/img/absolut.png",
+    "description": "Bebida con alcohol para tragos saborizados",
+    "price": 1900,
+    "stock": 10,
+    "initial": 0,
+    "category": "bebidas"
+  },
+  {
+    "id": 16,
+    "title": "Absolut Raspberry",
+    "picture": "/img/absolutraspberry.png",
+    "description": "Bebida con alcohol para tragos saborizados",
+    "price": 1900,
+    "stock": 10,
+    "initial": 0,
+    "category": "bebidas"
+  },
+  {
+    "id": 17,
+    "title": "Fernet Branca",
+    "picture": "/img/fernet.png",
+    "description": "Bebida con alcohol para tragos saborizados",
+    "price": 1900,
+    "stock": 10,
+    "initial": 0,
+    "category": "bebidas"
+  },
+  {
+    "id": 18,
+    "title": "Fernet Branca Menta",
+    "picture": "/img/fernetmenta.png",
+    "description": "Bebida con alcohol para tragos saborizados",
+    "price": 1900,
+    "stock": 10,
+    "initial": 0,
+    "category": "bebidas"
+  },
+  {
+    "id": 19,
+    "title": "Fanta",
+    "picture": "/img/fanta.png",
+    "description": "Bebida con alcohol para tragos saborizados",
+    "price": 1900,
+    "stock": 10,
+    "initial": 0,
+    "category": "acompañamientos"
+  },
+  {
+    "id": 20,
+    "title": "Sprite",
+    "picture": "/img/sprite.png",
+    "description": "Bebida con alcohol para tragos saborizados",
+    "price": 1900,
+    "stock": 10,
+    "initial": 0,
+    "category": "acompañamientos"
+  },
+  {
+    "id": 21,
     "title": "Coca-Cola",
     "picture": "/img/cocacola.png",
     "description": "Bebida con alcohol para tragos saborizados",
@@ -70,7 +210,7 @@
     "category": "acompañamientos"
   },
   {
-    "id": 8,
+    "id": 22,
     "title": "Schweppes Clásica",
     "picture": "/img/schweppes.png",
     "description": "Bebida con alcohol para tragos saborizados",
@@ -80,7 +220,7 @@
     "category": "acompañamientos"
   },
   {
-    "id": 9,
+    "id": 23,
     "title": "Schweppes Pomelo",
     "picture": "/img/schweppespomelo.png",
     "description": "Bebida con alcohol para tragos saborizados",
@@ -90,7 +230,7 @@
     "category": "acompañamientos"
   },
   {
-    "id": 10,
+    "id": 24,
     "title": "Speed",
     "picture": "/img/speed.png",
     "description": "Bebida con alcohol para tragos saborizados",
@@ -100,7 +240,7 @@
     "category": "acompañamientos"
   },
   {
-    "id": 11,
+    "id": 25,
     "title": "Baggio de naranja",
     "picture": "/img/jugonaranja.png",
     "description": "Bebida con alcohol para tragos saborizados",
@@ -110,7 +250,7 @@
     "category": "acompañamientos"
   },
   {
-    "id": 12,
+    "id": 26,
     "title": "Baggio de multifruta",
     "picture": "/img/jugomultifruta.png",
     "description": "Bebida con alcohol para tragos saborizados",
@@ -120,7 +260,7 @@
     "category": "acompañamientos"
   },
   {
-    "id": 13,
+    "id": 27,
     "title": "Baggio de durazno",
     "picture": "/img/jugodurazno.png",
     "description": "Bebida con alcohol para tragos saborizados",
@@ -130,7 +270,7 @@
     "category": "acompañamientos"
   },
   {
-    "id": 14,
+    "id": 28,
     "title": "Brahama",
     "picture": "/img/brahama.png",
     "description": "Bebida con alcohol para tragos saborizados",
@@ -140,7 +280,7 @@
     "category": "cervezas"
   },
   {
-    "id": 15,
+    "id": 29,
     "title": "Corona",
     "picture": "/img/corona.png",
     "description": "Bebida con alcohol para tragos saborizados",
@@ -150,7 +290,7 @@
     "category": "cervezas"
   },
   {
-    "id": 16,
+    "id": 30,
     "title": "Budweiser",
     "picture": "/img/budweiser.png",
     "description": "Bebida con alcohol para tragos saborizados",
@@ -160,7 +300,7 @@
     "category": "cervezas"
   },
   {
-    "id": 17,
+    "id": 31,
     "title": "Schneider",
     "picture": "/img/schneider.png",
     "description": "Bebida con alcohol para tragos saborizados",
@@ -170,7 +310,7 @@
     "category": "cervezas"
   },
   {
-    "id": 18,
+    "id": 32,
     "title": "Quilmes",
     "picture": "/img/quilmes.png",
     "description": "Bebida con alcohol para tragos saborizados",
@@ -180,7 +320,7 @@
     "category": "cervezas"
   },
   {
-    "id": 19,
+    "id": 33,
     "title": "Stella Artois",
     "picture": "/img/stellaartois.png",
     "description": "Bebida con alcohol para tragos saborizados",
@@ -190,7 +330,7 @@
     "category": "cervezas"
   },
   {
-    "id": 20,
+    "id": 34,
     "title": "Heineken",
     "picture": "/img/heineken.png",
     "description": "Bebida con alcohol para tragos saborizados",

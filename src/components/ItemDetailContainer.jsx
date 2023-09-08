@@ -12,7 +12,7 @@ export default function ItemDetailContainer() {
     new Promise((resolve) => {
       setTimeout(() => {
         if (idproduct) {
-          const productosFiltrados = productosJson.filter(
+          const productosFiltrados = productosJson.find(
             (product) => product.id == idproduct
           );
           resolve(productosFiltrados);

@@ -1,7 +1,6 @@
 import { Link } from 'react-router-dom';
 
-export default function Item({ id, title, picture, price, stock, initial }) {
-  console.log('ID desde ITEM:', id);
+export default function Item({ id, title, picture }) {
   return (
     <div className="producto">
       <h1 className="name-produc">{title}</h1>

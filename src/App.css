@@ -68,6 +68,7 @@
   font-size: 24px;
   margin: 40px 0px;
   transition: all 0.3s ease;
+  text-decoration: none;
 }
 
 .detail-produc:hover {
@@ -124,6 +125,7 @@
 }
 
 .container-detail {
+  margin: 90px 0;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -144,5 +146,25 @@
 }
 
 .count-detail {
-  margin-top: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+}
+
+.finalizar-detail {
+  text-decoration: none;
+  color: aliceblue;
+  margin-top: 20px;
+  margin-bottom: 5px;
+  padding: 10px 40px;
+  border: 1px solid rgb(0, 119, 255);
+  border-radius: 50px;
+  background-color: rgb(0, 119, 255);
+  transition: all 0.3s ease;
+}
+
+.finalizar-detail:hover {
+  color: rgb(0, 119, 255);
+  background: transparent;
 }

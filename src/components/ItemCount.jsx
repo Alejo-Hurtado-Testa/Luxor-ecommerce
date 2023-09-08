@@ -1,9 +1,9 @@
 import { useState } from 'react';
 
-export default function ItemCount({ stock, initial }) {
+export default function ItemCount({ stock, initial, onAdd }) {
   const [count, setcount] = useState(parseFloat(initial));
 
-  const onAdd = () => {
+  const add = () => {
     if (count < parseFloat(stock)) {
       return setcount(count + 1);
     } else {
@@ -11,7 +11,7 @@ export default function ItemCount({ stock, initial }) {
     }
   };
 
-  const onDash = () => {
+  const dash = () => {
     if (count > 0) {
       return setcount(count - 1);
     }
@@ -20,7 +20,7 @@ export default function ItemCount({ stock, initial }) {
   return (
     <div className="contador">
       <div className="contador-produc">
-        <button className="btndash" onClick={onDash}>
+        <button className="btndash" onClick={dash}>
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="40"
@@ -34,7 +34,7 @@ export default function ItemCount({ stock, initial }) {
           </svg>
         </button>
         <span className="numbercount-produc">{count}</span>
-        <button className="btnplus" onClick={onAdd}>
+        <button className="btnplus" onClick={add}>
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="40"
@@ -48,8 +48,9 @@ export default function ItemCount({ stock, initial }) {
           </svg>
         </button>
       </div>
-      <button className="btnadd-produc">Agregar al carrito</button>
-      <span>Stock disponible: {stock}</span>
+      <button onClick={() => onAdd(count)} className="btnadd-produc">
+        Agregar al carrito
+      </button>
     </div>
   );
 }

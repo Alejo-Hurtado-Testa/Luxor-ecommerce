@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import Itemlist from './ItemList';
 import productosJson from '../productos.json';
 import { useParams } from 'react-router-dom';
+import { Rings } from 'react-loader-spinner';
 
 const ItemListContainer = () => {
   const [listadoProductos, setListadoProductos] = useState([]);
@@ -23,6 +24,7 @@ const ItemListContainer = () => {
     });
 
   useEffect(() => {
+    setLoading(true);
     getProductos(tipo).then((res) => {
       setListadoProductos(res);
       setLoading(false);
@@ -32,9 +34,16 @@ const ItemListContainer = () => {
   if (!listadoProductos) return [];
   if (loading)
     return (
-      <h2 className="title-cargando">
-        Cargando Productos, espera por favor...
-      </h2>
+      <Rings
+        height="300"
+        width="300"
+        color="rgb(33, 37, 41)"
+        radius="6"
+        wrapperStyle={{}}
+        wrapperClass="ring-cargando"
+        visible={true}
+        ariaLabel="rings-loading"
+      />
     );
 
   return (

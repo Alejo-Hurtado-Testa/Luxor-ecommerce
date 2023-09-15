@@ -2,9 +2,10 @@ import { useEffect, useState } from 'react';
 import ItemDetail from './ItemDetail';
 import { useParams } from 'react-router-dom';
 import productosJson from '../productos.json';
+import { Rings } from 'react-loader-spinner';
 
 export default function ItemDetailContainer() {
-  const [product, setProduct] = useState();
+  const [product, setProduct] = useState([]);
   const [load, setLoad] = useState(true);
   const { id } = useParams();
 
@@ -23,6 +24,7 @@ export default function ItemDetailContainer() {
     });
 
   useEffect(() => {
+    setLoad(true);
     getProducto(id).then((res) => {
       setProduct(res);
       setLoad(false);
@@ -32,9 +34,16 @@ export default function ItemDetailContainer() {
   if (!product) return null;
   if (load)
     return (
-      <div>
-        <h2 className="title-cargando">CARGANDO....</h2>
-      </div>
+      <Rings
+        height="300"
+        width="300"
+        color="rgb(33, 37, 41)"
+        radius="6"
+        wrapperStyle={{}}
+        wrapperClass="ring-cargando"
+        visible={true}
+        ariaLabel="rings-loading"
+      />
     );
 
   return (

@@ -1,9 +1,11 @@
-import { useState } from 'react';
+import { useContext, useState } from 'react';
 import ItemCount from './ItemCount';
 import { Link } from 'react-router-dom';
+import { CartContext } from '../context/cartContext';
 
 export default function ItemDetail({ product }) {
   const [cantidad, setCantidad] = useState();
+  const { addItem } = useContext(CartContext);
 
   const onAdd = (cant) => {
     setCantidad(cant);
@@ -32,7 +34,11 @@ export default function ItemDetail({ product }) {
             </p>
             <div className="count-detail">
               {cantidad ? (
-                <Link to={'/cart'} className="finalizar-detail">
+                <Link
+                  to={'/cart'}
+                  className="finalizar-detail"
+                  onClick={() => addItem(product, cantidad)}
+                >
                   Finalizar compra {cantidad}
                 </Link>
               ) : (

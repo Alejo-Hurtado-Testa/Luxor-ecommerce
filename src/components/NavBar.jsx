@@ -61,7 +61,7 @@ export default function NavBar() {
             >
               Acompañamientos
             </Nav.Link>
-            <Nav.Link className="navLinksItems" href="#link">
+            <Nav.Link className="navLinksItems" as={NavLink} to={'/cart'}>
               <CartWidget />
             </Nav.Link>
           </Nav>

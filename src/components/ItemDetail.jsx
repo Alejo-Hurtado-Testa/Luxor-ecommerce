@@ -9,6 +9,9 @@ export default function ItemDetail({ product }) {
 
   const onAdd = (cant) => {
     setCantidad(cant);
+    if (cant !== 0) {
+      addItem(product, cant);
+    }
   };
 
   return (
@@ -37,9 +40,9 @@ export default function ItemDetail({ product }) {
                 <Link
                   to={'/cart'}
                   className="finalizar-detail"
-                  onClick={() => addItem(product, cantidad)}
+                  /*onClick={() => addItem(product, cantidad)}*/
                 >
-                  Finalizar compra {cantidad}
+                  Finalizar compra
                 </Link>
               ) : (
                 <ItemCount

@@ -206,6 +206,11 @@
   border: 1px solid rgb(255, 55, 55);
   color: aliceblue;
   padding: 15px 20px;
+  transition: all 0.3s ease;
+}
+
+.btn-cart-clear:hover {
+  letter-spacing: 2px;
 }
 
 .container-cart-grid {
@@ -226,6 +231,11 @@
   border-radius: 10px;
   background: rgb(255, 55, 55);
   text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.btn-cart-remove:hover {
+  transform: scale(1.2);
 }
 
 .btn-finalizar {
@@ -235,10 +245,16 @@
 }
 
 .btn-cart-finalizar {
+  margin: 80px 0;
   font-size: 1.5rem;
   color: aliceblue;
   padding: 15px 30px;
   border-radius: 20px;
   border: none;
   background-color: rgb(0, 119, 255);
+  transition: all 0.3s ease;
+}
+
+.btn-cart-finalizar:hover {
+  letter-spacing: 2px;
 }

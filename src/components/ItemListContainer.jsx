@@ -1,34 +1,45 @@
 import { useEffect, useState } from 'react';
 import Itemlist from './ItemList';
-import productosJson from '../productos.json';
 import { useParams } from 'react-router-dom';
 import { Rings } from 'react-loader-spinner';
+import {
+  collection,
+  getDocs,
+  getFirestore,
+  query,
+  where,
+} from 'firebase/firestore';
 
 const ItemListContainer = () => {
   const [listadoProductos, setListadoProductos] = useState([]);
   const [loading, setLoading] = useState(true);
   const { tipo } = useParams();
 
-  const getProductos = (categoria) =>
-    new Promise((resolve) => {
-      setTimeout(() => {
-        if (!categoria) {
-          resolve(productosJson);
-        } else {
-          const productosFiltrados = productosJson.filter(
-            (product) => product.category === categoria
-          );
-          resolve(productosFiltrados);
-        }
-      }, 2000);
-    });
-
   useEffect(() => {
     setLoading(true);
-    getProductos(tipo).then((res) => {
-      setListadoProductos(res);
-      setLoading(false);
-    });
+    const db = getFirestore();
+
+    if (!tipo) {
+      const itemsCollection = collection(db, 'bebidas');
+      setTimeout(() => {
+        getDocs(itemsCollection).then((snapshot) => {
+          setListadoProductos(
+            snapshot.docs.map((doc) => ({ id: doc.id, ...doc.data() }))
+          );
+          setLoading(false);
+        });
+      }, 2000);
+    } else {
+      const q = query(collection(db, 'bebidas'), where('category', '==', tipo));
+      setTimeout(() => {
+        getDocs(q).then((snapshot) => {
+          setListadoProductos(
+            snapshot.docs.map((doc) => ({ id: doc.id, ...doc.data() }))
+          );
+          setLoading(false);
+        });
+      }, 2000);
+    }
   }, [tipo]);
 
   if (!listadoProductos) return [];

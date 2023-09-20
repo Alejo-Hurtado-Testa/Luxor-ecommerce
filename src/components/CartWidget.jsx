@@ -5,9 +5,7 @@ export default function CartWidget() {
   const [quant, setQuant] = useState(0);
   const { cartList } = useContext(CartContext);
 
-  console.log('quant:', quant);
   let cantidadItems = 0;
-  console.log('cantidadItems:', cantidadItems);
   useEffect(() => {
     cartList.forEach((element) => {
       cantidadItems += element.quantity;

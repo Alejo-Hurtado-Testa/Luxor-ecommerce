@@ -86,7 +86,9 @@ export default function Cart() {
           </div>
         ))}
         <div className="btn-finalizar">
-          <button className="btn-cart-finalizar">Finalizar compra</button>
+          <Link to={'/checkout'} className="btn-cart-finalizar">
+            Confirmar productos
+          </Link>
         </div>
       </div>
     </div>

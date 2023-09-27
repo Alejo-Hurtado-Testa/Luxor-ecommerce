@@ -247,6 +247,7 @@
 .btn-cart-finalizar {
   margin: 80px 0;
   font-size: 1.5rem;
+  text-decoration: none;
   color: aliceblue;
   padding: 15px 30px;
   border-radius: 20px;
@@ -257,4 +258,46 @@
 
 .btn-cart-finalizar:hover {
   letter-spacing: 2px;
+}
+
+/* CHECKOUT */
+
+.title-fina-compra,
+.title-fina-datos {
+  text-align: center;
+  margin: 90px 0;
+  text-transform: uppercase;
+}
+
+.form-finalizar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.input-finalizar {
+  margin: 20px 0;
+  width: 70vw;
+  padding: 10px 0;
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.btn-finalizar-checkout {
+  color: aliceblue;
+  letter-spacing: 2px;
+  margin: 20px;
+  padding: 10px 40px;
+  border-radius: 20px;
+  background-color: rgb(8, 8, 8);
+  border: 1px solid rgb(8, 8, 8);
+  transition: all 0.3s ease;
+  -webkit-box-reflect: below 25px
+    linear-gradient(to bottom, transparent 0%, rgb(8, 8, 8) 250%);
+}
+
+.btn-finalizar-checkout:hover {
+  transform: scale(1.2);
 }

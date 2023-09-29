@@ -17,7 +17,6 @@ export default function CartWidget() {
     <span
       style={{
         display: cartList.length === 0 ? 'none' : 'inline-block',
-        pointerEvents: cartList.length === 0 ? 'none' : 'auto',
       }}
     >
       <svg

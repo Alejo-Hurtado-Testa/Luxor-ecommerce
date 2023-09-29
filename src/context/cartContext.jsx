@@ -4,6 +4,13 @@ export const CartContext = createContext([]);
 
 export function ThemeProvider({ children }) {
   const [cartList, setCartList] = useState([]);
+  const [total, setTotal] = useState();
+
+  const calcPriceTot = (price) => {
+    let tot = 0;
+    tot += price;
+    setTotal(tot);
+  };
 
   const addItem = (item, quantity) => {
     const updatedCart = [...cartList];
@@ -25,17 +32,17 @@ export function ThemeProvider({ children }) {
     setCartList([]);
   };
 
-  const isInCart = (id) => {
-    const fountItem = cartList.find((item) => item.id === id);
-    if (fountItem) {
-      return alert('Esta en carrito');
-    }
-  };
-
   return (
     <div>
       <CartContext.Provider
-        value={{ cartList, addItem, removeItem, clearList }}
+        value={{
+          cartList,
+          addItem,
+          removeItem,
+          clearList,
+          calcPriceTot,
+          total,
+        }}
       >
         {children}
       </CartContext.Provider>

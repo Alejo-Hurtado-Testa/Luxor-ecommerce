@@ -1,51 +1,87 @@
 import { useContext, useState } from 'react';
 import { addDoc, collection, getFirestore } from 'firebase/firestore';
 import { CartContext } from '../context/cartContext';
+import Swal from 'sweetalert2';
+import { Link } from 'react-router-dom';
 
 export default function Checkout() {
-  const [nombre, setNombre] = useState('');
-  const [correo, setCorreo] = useState('');
-  const [telefono, setTelefono] = useState('');
-  const [orderId, setOrderId] = useState('');
-  const { cartList } = useContext(CartContext);
+  const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
+  const [phone, setPhone] = useState('');
+  const [orderId, setOrderId] = useState();
+  const { cartList, total, clearList } = useContext(CartContext);
 
-  console.log(cartList);
-  const crearOrden = () => {
+  const createOrder = (event) => {
+    event.preventDefault();
     const order = {
-      buyer: { name: nombre, phone: telefono, email: correo },
-      items: [{ id: '', title: '', price: '', quantity: '' }],
-      total: 1324,
+      buyer: { name: name, phone: phone, email: email },
+      items: cartList.map((element) => {
+        return {
+          id: element.id,
+          title: element.title,
+          price: element.price,
+          quantity: element.quantity,
+        };
+      }),
+      total: total,
     };
+
     const db = getFirestore();
     const ordersCollection = collection(db, 'ordenes');
-    addDoc(ordersCollection, order).then(({ id }) => setOrderId(id));
+    addDoc(ordersCollection, order).then(({ id }) =>
+      Swal.fire({
+        title: 'Orden completada con exito!',
+        html: `Tu id de orden es: ${id}`,
+        icon: 'success',
+      }).then((result) => {
+        if (result.isConfirmed) {
+          clearList();
+          setOrderId(id);
+        }
+      })
+    );
   };
+
+  if (orderId) {
+    return (
+      <div className="order-finished-titles">
+        <h1>Muchas gracias por su compra!</h1>
+        <h2>
+          Haz click <Link to={'/'}>aqui</Link> para volver a la pagina de
+          inicio.
+        </h2>
+      </div>
+    );
+  }
 
   return (
     <div>
       <h1 className="title-fina-compra">finalizando la compra</h1>
-      <h2 className="title-fina-datos">completa con tus datos!</h2>
-      <form className="form-finalizar">
+      <h2 className="title-fina-datos">Completa con tus datos!</h2>
+      <form className="form-finalizar" onSubmit={createOrder}>
         <input
           type="text"
-          value={nombre}
+          value={name}
           placeholder="Nombre"
-          onChange={(e) => setNombre(e.target.value)}
+          onChange={(e) => setName(e.target.value)}
           className="input-finalizar"
+          required
         />
         <input
           type="text"
-          value={correo}
+          value={email}
           placeholder="Email"
-          onChange={(e) => setCorreo(e.target.value)}
+          onChange={(e) => setEmail(e.target.value)}
           className="input-finalizar"
+          required
         />
         <input
-          type="text"
-          value={telefono}
+          type="number"
+          value={phone}
           placeholder="Numero"
-          onChange={(e) => setTelefono(e.target.value)}
+          onChange={(e) => setPhone(e.target.value)}
           className="input-finalizar"
+          required
         />
         <button className="btn-finalizar-checkout">Finalizar compra</button>
       </form>

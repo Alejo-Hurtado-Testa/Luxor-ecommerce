@@ -3,15 +3,15 @@ import { CartContext } from '../context/cartContext';
 import { Link } from 'react-router-dom';
 
 export default function Cart() {
-  const { cartList, removeItem, clearList } = useContext(CartContext);
-  const [total, setTotal] = useState();
+  const { cartList, removeItem, clearList, calcPriceTot, total } =
+    useContext(CartContext);
 
   useEffect(() => {
     let pricetotal = 0;
     cartList.forEach((element) => {
       pricetotal += element.price * element.quantity;
     });
-    setTotal(pricetotal);
+    calcPriceTot(pricetotal);
   }, [cartList]);
 
   if (cartList.length === 0)
@@ -55,16 +55,22 @@ export default function Cart() {
             </div>
             <div className="item-cart-grid">
               <h2>{producto.title}</h2>
-              <p>{producto.description}</p>
+              <span>{producto.description}</span>
             </div>
             <div className="item-cart-grid">
-              <span>Precio por unidad: ${producto.price}</span>
+              <p>
+                Precio por unidad: <span>${producto.price}</span>
+              </p>
             </div>
             <div className="item-cart-grid">
-              <p>Categoria: {producto.category}</p>
+              <p>
+                Categoria: <span>{producto.category}</span>
+              </p>
             </div>
             <div className="item-cart-grid">
-              <p>Cantidad seleccionada: {producto.quantity}</p>
+              <p>
+                Cantidad seleccionada: <span>{producto.quantity}</span>
+              </p>
             </div>
             <div>
               <button

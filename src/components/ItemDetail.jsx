@@ -37,11 +37,7 @@ export default function ItemDetail({ product }) {
             </p>
             <div className="count-detail">
               {cantidad ? (
-                <Link
-                  to={'/cart'}
-                  className="finalizar-detail"
-                  /*onClick={() => addItem(product, cantidad)}*/
-                >
+                <Link to={'/cart'} className="finalizar-detail">
                   Finalizar compra
                 </Link>
               ) : (

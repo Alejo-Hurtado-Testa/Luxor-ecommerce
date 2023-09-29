@@ -2,7 +2,7 @@ import Item from './Item';
 
 export default function Itemlist({ items }) {
   return (
-    <div>
+    <div className="itemlist-main">
       {items.map((item) => (
         <Item
           key={item.id}

@@ -1,17 +1,8 @@
-import { useContext, useEffect, useState } from 'react';
+import { useContext } from 'react';
 import { CartContext } from '../context/cartContext';
 
 export default function CartWidget() {
-  const [quant, setQuant] = useState(0);
-  const { cartList } = useContext(CartContext);
-
-  let cantidadItems = 0;
-  useEffect(() => {
-    cartList.forEach((element) => {
-      cantidadItems += element.quantity;
-    });
-    setQuant(cantidadItems);
-  }, [cartList]);
+  const { cartList, quant } = useContext(CartContext);
 
   return (
     <span

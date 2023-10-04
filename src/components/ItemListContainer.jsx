@@ -21,28 +21,23 @@ const ItemListContainer = () => {
 
     if (!tipo) {
       const itemsCollection = collection(db, 'bebidas');
-      setTimeout(() => {
-        getDocs(itemsCollection).then((snapshot) => {
-          setListadoProductos(
-            snapshot.docs.map((doc) => ({ id: doc.id, ...doc.data() }))
-          );
-          setLoading(false);
-        });
-      }, 2000);
+      getDocs(itemsCollection).then((snapshot) => {
+        setListadoProductos(
+          snapshot.docs.map((doc) => ({ id: doc.id, ...doc.data() }))
+        );
+        setLoading(false);
+      });
     } else {
       const q = query(collection(db, 'bebidas'), where('category', '==', tipo));
-      setTimeout(() => {
-        getDocs(q).then((snapshot) => {
-          setListadoProductos(
-            snapshot.docs.map((doc) => ({ id: doc.id, ...doc.data() }))
-          );
-          setLoading(false);
-        });
-      }, 2000);
+      getDocs(q).then((snapshot) => {
+        setListadoProductos(
+          snapshot.docs.map((doc) => ({ id: doc.id, ...doc.data() }))
+        );
+        setLoading(false);
+      });
     }
   }, [tipo]);
 
-  if (!listadoProductos) return [];
   if (loading)
     return (
       <Rings

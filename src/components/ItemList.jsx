@@ -1,8 +1,9 @@
+import { Row } from 'react-bootstrap';
 import Item from './Item';
 
 export default function Itemlist({ items }) {
   return (
-    <div className="itemlist-main">
+    <Row className="itemlist-main">
       {items.map((item) => (
         <Item
           key={item.id}
@@ -14,6 +15,6 @@ export default function Itemlist({ items }) {
           initial={item.initial}
         />
       ))}
-    </div>
+    </Row>
   );
 }

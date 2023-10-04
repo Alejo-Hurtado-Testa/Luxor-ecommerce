@@ -1,15 +1,24 @@
-import { createContext, useState } from 'react';
+import { createContext, useState, useEffect } from 'react';
 
 export const CartContext = createContext([]);
 
 export function ThemeProvider({ children }) {
+  const [quant, setQuant] = useState(0);
   const [cartList, setCartList] = useState([]);
   const [total, setTotal] = useState();
 
+  let cantidadItems = 0;
+  useEffect(() => {
+    cartList.forEach((element) => {
+      cantidadItems += element.quantity;
+    });
+    setQuant(cantidadItems);
+  }, [cartList]);
+
   const calcPriceTot = (price) => {
-    let tot = 0;
-    tot += price;
-    setTotal(tot);
+    let totalPrice = 0;
+    totalPrice += price;
+    setTotal(totalPrice);
   };
 
   const addItem = (item, quantity) => {
@@ -42,6 +51,7 @@ export function ThemeProvider({ children }) {
           clearList,
           calcPriceTot,
           total,
+          quant,
         }}
       >
         {children}

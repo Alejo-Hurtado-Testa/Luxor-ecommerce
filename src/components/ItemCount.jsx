@@ -1,10 +1,10 @@
 import { useState } from 'react';
 
-export default function ItemCount({ stock, initial, onAdd }) {
-  const [count, setcount] = useState(parseFloat(initial));
+export default function ItemCount({ stock, onAdd }) {
+  const [count, setcount] = useState(1);
 
   const add = () => {
-    if (count < parseFloat(stock)) {
+    if (count < stock) {
       return setcount(count + 1);
     } else {
       alert('STOCK INSUFICIENTE');

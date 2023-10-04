@@ -1,6 +1,7 @@
 import { useContext, useEffect, useState } from 'react';
 import { CartContext } from '../context/cartContext';
 import { Link } from 'react-router-dom';
+import { Col, Container, Row } from 'react-bootstrap';
 
 export default function Cart() {
   const { cartList, removeItem, clearList, calcPriceTot, total } =
@@ -47,32 +48,32 @@ export default function Cart() {
           Eliminar todos los productos
         </button>
       </div>
-      <div>
+      <Container>
         {cartList.map((producto) => (
-          <div key={producto.id} className="container-cart-grid">
-            <div className="item-cart-grid">
+          <Row key={producto.id} className="container-cart-grid">
+            <Col className="item-cart-grid">
               <img src={producto.picture} alt={producto.title} width={150} />
-            </div>
-            <div className="item-cart-grid">
+            </Col>
+            <Col className="item-cart-grid">
               <h2>{producto.title}</h2>
               <span>{producto.description}</span>
-            </div>
-            <div className="item-cart-grid">
+            </Col>
+            <Col className="item-cart-grid">
               <p>
                 Precio por unidad: <span>${producto.price}</span>
               </p>
-            </div>
-            <div className="item-cart-grid">
+            </Col>
+            <Col className="item-cart-grid">
               <p>
                 Categoria: <span>{producto.category}</span>
               </p>
-            </div>
-            <div className="item-cart-grid">
+            </Col>
+            <Col className="item-cart-grid">
               <p>
                 Cantidad seleccionada: <span>{producto.quantity}</span>
               </p>
-            </div>
-            <div>
+            </Col>
+            <Col>
               <button
                 className="btn-cart-remove"
                 onClick={() => removeItem(producto.id)}
@@ -88,15 +89,15 @@ export default function Cart() {
                   <path d="M11 1.5v1h3.5a.5.5 0 0 1 0 1h-.538l-.853 10.66A2 2 0 0 1 11.115 16h-6.23a2 2 0 0 1-1.994-1.84L2.038 3.5H1.5a.5.5 0 0 1 0-1H5v-1A1.5 1.5 0 0 1 6.5 0h3A1.5 1.5 0 0 1 11 1.5Zm-5 0v1h4v-1a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5ZM4.5 5.029l.5 8.5a.5.5 0 1 0 .998-.06l-.5-8.5a.5.5 0 1 0-.998.06Zm6.53-.528a.5.5 0 0 0-.528.47l-.5 8.5a.5.5 0 0 0 .998.058l.5-8.5a.5.5 0 0 0-.47-.528ZM8 4.5a.5.5 0 0 0-.5.5v8.5a.5.5 0 0 0 1 0V5a.5.5 0 0 0-.5-.5Z" />
                 </svg>
               </button>
-            </div>
-          </div>
+            </Col>
+          </Row>
         ))}
         <div className="btn-finalizar">
           <Link to={'/checkout'} className="btn-cart-finalizar">
             Confirmar productos
           </Link>
         </div>
-      </div>
+      </Container>
     </div>
   );
 }

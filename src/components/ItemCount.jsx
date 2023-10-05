@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import Swal from 'sweetalert2';
 
 export default function ItemCount({ stock, onAdd }) {
   const [count, setcount] = useState(1);
@@ -7,7 +8,11 @@ export default function ItemCount({ stock, onAdd }) {
     if (count < stock) {
       return setcount(count + 1);
     } else {
-      alert('STOCK INSUFICIENTE');
+      Swal.fire({
+        icon: 'error',
+        title: 'Oops...',
+        text: 'Stock insuficiente!',
+      });
     }
   };
 
